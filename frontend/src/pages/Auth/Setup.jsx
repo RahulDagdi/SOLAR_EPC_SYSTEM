@@ -15,7 +15,7 @@ const Setup = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    companyName: 'ATPL Solar EPC Pvt Ltd',
+    companyName: ' Solar EPC Pvt Ltd',
     companyCode: 'ATPL001',
     gstin: '',
     pan: '',
@@ -108,7 +108,7 @@ const Setup = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-solar-100 mb-4">
             <Sun className="w-8 h-8 text-solar-600" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">ATPL Solar EPC</h1>
+          <h1 className="text-2xl font-bold text-gray-900"> Solar EPC</h1>
           <p className="text-gray-500 mt-1">First Time Setup - Create Super Admin</p>
         </div>
 
@@ -119,7 +119,7 @@ const Setup = () => {
               <div>
                 <h3 className="font-semibold text-blue-900">Welcome to First Time Setup</h3>
                 <p className="text-sm text-blue-700 mt-1">
-                  This is a one-time setup to create your Super Admin account. 
+                  This is a one-time setup to create your Super Admin account.
                   After this, you can login and create other users.
                 </p>
               </div>
@@ -198,7 +198,7 @@ const Setup = () => {
 
             <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
               <p className="text-sm text-yellow-800">
-                <strong>Important:</strong> This setup can only be done once. After creating the Super Admin, 
+                <strong>Important:</strong> This setup can only be done once. After creating the Super Admin,
                 you will be redirected to the login page. Make sure to remember your email and password!
               </p>
             </div>

@@ -51,6 +51,6 @@ db.auditlogs.createIndex({ "userId": 1 })
 db.auditlogs.createIndex({ "action": 1 })
 
 // Print confirmation
-print("MongoDB setup completed for ATPL Solar EPC Management System")
+print("MongoDB setup completed for  Solar EPC Management System")
 print("Database: atpl_solar_epc")
 print("Indexes created successfully")

@@ -43,7 +43,7 @@ const Login = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-solar-100 mb-4">
             <Sun className="w-8 h-8 text-solar-600" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">ATPL Solar EPC</h1>
+          <h1 className="text-2xl font-bold text-gray-900"> Solar EPC</h1>
           <p className="text-gray-500 mt-1">Management System</p>
         </div>
 

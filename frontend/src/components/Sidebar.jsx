@@ -54,202 +54,202 @@ const Sidebar = () => {
         { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, roles: ['super_admin', 'admin', 'finance_manager', 'project_manager', 'hr_manager', 'sales_executive', 'accountant'] },
       ]
     },
- 
-{
-  title: "Masters",
-
-  items: [
 
     {
-      path: "/masters",
-      label: "Masters Dashboard",
-      icon: FolderTree,
-      roles: [
-        "super_admin",
-        "admin"
+      title: "Masters",
+
+      items: [
+
+        {
+          path: "/masters",
+          label: "Masters Dashboard",
+          icon: FolderTree,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/countries",
+          label: "Country Master",
+          icon: Globe,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/states",
+          label: "State Master",
+          icon: Map,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        // {
+        //   path: "/masters/districts",
+        //   label: "District Master",
+        //   icon: MapPinned,
+        //   roles: [
+        //     "super_admin",
+        //     "admin"
+        //   ]
+        // },
+
+        {
+          path: "/masters/cities",
+          label: "City Master",
+          icon: Building2,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/currencies",
+          label: "Currency Master",
+          icon: DollarSign,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/customer-types",
+          label: "Customer Type",
+          icon: Users,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/industry-segments",
+          label: "Industry Segment",
+          icon: Briefcase,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/msme-status",
+          label: "MSME Status",
+          icon: Landmark,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/customer-status",
+          label: "Customer Status",
+          icon: ClipboardList,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+        {
+          path: "/masters/departments",
+          label: "Department Master",
+          icon: Briefcase,
+          roles: [
+            "super_admin",
+            "admin"
+          ]
+        },
+
+        {
+          path: "/masters/designations",
+          label: "Designation Master",
+          icon: Badge,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/units",
+          label: "Unit Master",
+          icon: Ruler,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/material-categories",
+          label: "Material Category Master",
+          icon: Boxes,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/work-types",
+          label: "Work Type Master",
+          icon: Hammer,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/expense-types",
+          label: "Expense Type Master",
+          icon: Receipt,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/payment-terms",
+          label: "Payment Terms Master",
+          icon: CreditCard,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/taxes",
+          label: "Tax Master",
+          icon: Percent,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/project-stages",
+          label: "Project Stage Master",
+          icon: Milestone,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/approval-levels",
+          label: "Approval Level Master",
+          icon: CheckSquare,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/project-sites",
+          label: "Project Site Master",
+          icon: MapPin,
+          roles: ["super_admin", "admin"]
+        },
+
+        {
+          path: "/masters/boq-items",
+          label: "BOQ Item Master",
+          icon: ListChecks,
+          roles: ["super_admin", "admin"]
+        },
+
       ]
     },
 
     {
-      path: "/masters/countries",
-      label: "Country Master",
-      icon: Globe,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/states",
-      label: "State Master",
-      icon: Map,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    // {
-    //   path: "/masters/districts",
-    //   label: "District Master",
-    //   icon: MapPinned,
-    //   roles: [
-    //     "super_admin",
-    //     "admin"
-    //   ]
-    // },
-
-    {
-      path: "/masters/cities",
-      label: "City Master",
-      icon: Building2,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/currencies",
-      label: "Currency Master",
-      icon: DollarSign,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/customer-types",
-      label: "Customer Type",
-      icon: Users,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/industry-segments",
-      label: "Industry Segment",
-      icon: Briefcase,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/msme-status",
-      label: "MSME Status",
-      icon: Landmark,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    },
-
-    {
-      path: "/masters/customer-status",
-      label: "Customer Status",
-      icon: ClipboardList,
-      roles: [
-        "super_admin",
-        "admin"
-      ]
-    } ,
-    {
-    path: "/masters/departments",
-    label: "Department Master",
-    icon: Briefcase,
-    roles: [
-        "super_admin",
-        "admin"              
-    ]
-},
-
-    {
-      path: "/masters/designations",
-      label: "Designation Master",
-      icon: Badge,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/units",
-      label: "Unit Master",
-      icon: Ruler,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/material-categories",
-      label: "Material Category Master",
-      icon: Boxes,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/work-types",
-      label: "Work Type Master",
-      icon: Hammer,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/expense-types",
-      label: "Expense Type Master",
-      icon: Receipt,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/payment-terms",
-      label: "Payment Terms Master",
-      icon: CreditCard,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/taxes",
-      label: "Tax Master",
-      icon: Percent,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/project-stages",
-      label: "Project Stage Master",
-      icon: Milestone,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/approval-levels",
-      label: "Approval Level Master",
-      icon: CheckSquare,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/project-sites",
-      label: "Project Site Master",
-      icon: MapPin,
-      roles: ["super_admin", "admin"]
-    },
-
-    {
-      path: "/masters/boq-items",
-      label: "BOQ Item Master",
-      icon: ListChecks,
-      roles: ["super_admin", "admin"]
-    },
-
-  ]
-},
-
- {
       title: 'HR',
       items: [
         { path: '/hr/employees', label: 'Employee Master', icon: Users, roles: ['super_admin', 'admin', 'hr_manager'] },
@@ -261,7 +261,7 @@ const Sidebar = () => {
       ]
     },
 
-     {
+    {
       title: 'Finance & Accounts',
       items: [
         { path: '/finance/budget', label: 'Budget Planning', icon: Wallet, roles: ['super_admin', 'admin', 'finance_manager'] },
@@ -276,7 +276,7 @@ const Sidebar = () => {
     },
 
 
- 
+
     {
       title: 'Inventory',
       items: [
@@ -298,7 +298,7 @@ const Sidebar = () => {
         { path: '/vendors/payments', label: 'Milestone Payments', icon: Wallet, roles: ['super_admin', 'admin', 'finance_manager', 'project_manager'] },
       ]
     },
-      {
+    {
       title: 'Sales & CRM',
       items: [
         { path: '/sales/clients', label: 'Client Master', icon: Building2, roles: ['super_admin', 'admin', 'sales_executive'] },
@@ -308,12 +308,12 @@ const Sidebar = () => {
         { path: '/sales/revenue', label: 'Revenue Tracking', icon: DollarSign, roles: ['super_admin', 'admin', 'finance_manager', 'sales_executive'] },
       ]
     },
-   
+
     {
       title: 'Admin',
       items: [
-        { path:'/admin/users', label:'User Management', icon: Users, roles:['super_admin','admin']},
-        {path:'/admin/roles',label:'Role Management',icon:Shield,roles:['admin']},
+        { path: '/admin/users', label: 'User Management', icon: Users, roles: ['super_admin', 'admin'] },
+        { path: '/admin/roles', label: 'Role Management', icon: Shield, roles: ['admin'] },
         { path: '/admin/audit', label: 'Audit Trail', icon: Shield, roles: ['super_admin', 'admin'] },
         { path: '/admin/settings', label: 'Settings', icon: Settings, roles: ['super_admin'] },
       ]
@@ -327,7 +327,7 @@ const Sidebar = () => {
         <div className="flex items-center gap-2">
           <Sun className="w-8 h-8 text-solar-500" />
           <div>
-            <h1 className="text-lg font-bold text-gray-900">ATPL Solar</h1>
+            <h1 className="text-lg font-bold text-gray-900"> Solar</h1>
             <p className="text-xs text-gray-500">EPC Management</p>
           </div>
         </div>

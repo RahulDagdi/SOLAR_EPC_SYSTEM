@@ -31,7 +31,7 @@ const Header = ({ sidebarOpen, setSidebarOpen, onLogout }) => {
             <Menu className="w-5 h-5 text-gray-600" />
           </button>
           <h2 className="text-lg font-semibold text-gray-800">
-            ATPL Solar EPC Management System
+            Solar EPC Management System
           </h2>
         </div>
 

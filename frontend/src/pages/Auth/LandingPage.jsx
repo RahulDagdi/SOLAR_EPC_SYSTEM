@@ -9,7 +9,7 @@ const LandingPage = () => {
       <nav className="px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Sun className="w-8 h-8 text-solar-500" />
-          <span className="text-xl font-bold text-gray-900">ATPL Solar</span>
+          <span className="text-xl font-bold text-gray-900"> Solar</span>
         </div>
         <div className="flex items-center gap-4">
           <Link to="/login" className="btn-primary">
@@ -32,7 +32,7 @@ const LandingPage = () => {
               <br />Platform
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              One integrated platform for managing your entire solar EPC business — from lead generation 
+              One integrated platform for managing your entire solar EPC business — from lead generation
               and project execution to finance, HR, inventory, and vendor management.
             </p>
             <div className="flex items-center gap-4">
@@ -99,7 +99,7 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="border-t border-gray-200 py-8">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
-          ATPL Solar EPC Management System | Version 1.0 | June 2026
+          Solar EPC Management System | Version 1.0 | June 2026
         </div>
       </footer>
     </div>

@@ -13,7 +13,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const setupRoutes = require('./routes/setup');
 const userRoutes = require('./routes/users');
-const roleRoutes=require("./routes/roles");
+const roleRoutes = require("./routes/roles");
 const clientRoutes = require('./routes/clients');
 const projectRoutes = require('./routes/projects');
 const taskRoutes = require('./routes/tasks');
@@ -68,7 +68,7 @@ connectDB();
 app.use(helmet());
 app.use(cors({
   // origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  origin: process.env.FRONTEND_URL ||'https://solar-epc-system.vercel.app/',
+  origin: process.env.FRONTEND_URL || 'https://solar-epc-system.vercel.app/',
   credentials: true
 }));
 
@@ -94,7 +94,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api/setup', setupRoutes); // Setup route (no auth needed for first time)
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
-app.use("/api/roles",roleRoutes);
+app.use("/api/roles", roleRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
@@ -161,7 +161,19 @@ app.use("/api/masters/project-sites", projectSiteRoutes);
 app.use("/api/masters/boq-items", boqItemRoutes);
 
 
+
+app.get('/', (req, res) => {
+  res.send(' Solar EPC Backend is Running 🚀');
+});
+
 // Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'OK'
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
@@ -170,6 +182,8 @@ app.get('/api/health', (req, res) => {
     mongodb: mongoose.connection.readyState === 1 ? 'Connected' : 'Disconnected'
   });
 });
+
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {

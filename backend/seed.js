@@ -22,7 +22,7 @@ const createSuperAdmin = async () => {
 
     // Create default company/organization
     const company = new Company({
-      name: 'ATPL Solar EPC Pvt Ltd',
+      name: ' Solar EPC Pvt Ltd',
       code: 'ATPL001',
       gstin: 'YOUR_GSTIN_HERE',
       pan: 'YOUR_PAN_HERE',

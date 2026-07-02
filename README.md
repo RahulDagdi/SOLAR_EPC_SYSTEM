@@ -1,14 +1,16 @@
-# ATPL Solar EPC Management System
+# Solar EPC Management System
 
 ## Complete Web-based ERP System for Solar EPC Company
 
 ### System Architecture
+
 - **Frontend**: React.js + Vite + Tailwind CSS + Recharts
 - **Backend**: Node.js + Express.js
 - **Database**: MongoDB (Local & Atlas Cloud)
 - **Authentication**: JWT + Role-Based Access Control
 
 ### 7 Modules
+
 1. **Human Resources** - Employee Master, Attendance, Payroll, Recruitment, Performance, Training
 2. **Finance** - Budget Planning, P&L, Cost Management, Cash Flow, Overrun Alerts
 3. **Accounts** - GST Invoices, Payments, Ledger, Approvals, Audit Trail
@@ -18,12 +20,14 @@
 7. **Sales** - Lead Management, Quotation Builder, PO Register, Revenue Tracking
 
 ### Auth System
+
 - **Login**: All users (including Super Admin)
 - **Register**: Only Super Admin can create users with roles
 - **Forgot Password**: Only Super Admin can reset passwords
 - **Organization-based**: Super Admin creates organizations, users belong to one org
 
 ### Features
+
 - Full CRUD operations (Get, Add, Update, Delete)
 - Single row delete + Bulk delete + Soft delete with restore
 - Pagination, Search, Filter
@@ -36,6 +40,7 @@
 ### Setup Instructions
 
 #### Backend Setup
+
 ```bash
 cd backend
 npm install
@@ -44,6 +49,7 @@ npm run dev
 ```
 
 #### Frontend Setup
+
 ```bash
 cd frontend
 npm install
@@ -51,14 +57,17 @@ npm run dev
 ```
 
 #### MongoDB Setup
+
 - **Local**: Install MongoDB locally, connection string: `mongodb://localhost:27017/atpl_solar_epc`
 - **Atlas**: Create cluster on MongoDB Atlas, update MONGODB_URI_ATLAS in .env
 
 ### Default Ports
+
 - Backend: http://localhost:5000
 - Frontend: http://localhost:5173
 
 ### API Endpoints
+
 - `/api/auth` - Authentication (login, register, forgot password)
 - `/api/users` - User management
 - `/api/clients` - Client master
@@ -79,6 +88,7 @@ npm run dev
 - `/api/audit` - Audit trail
 
 ### User Roles
+
 - `super_admin` - Full access, can create users and organizations
 - `admin` - Organization admin
 - `finance_manager` - Finance and accounts access
@@ -90,6 +100,7 @@ npm run dev
 - `vendor` - External portal
 
 ### Development Phases
+
 1. Foundation (Auth, Users, Projects, Clients)
 2. Core Operations (Tasks, DPR, Invoices, Payments)
 3. Inventory (Items, GRN, Warehouse, Dispatch)
@@ -99,6 +110,7 @@ npm run dev
 7. Testing & Go-Live
 
 ### Security Features
+
 - JWT authentication with refresh tokens
 - Password hashing with bcrypt (12 rounds)
 - Role-based access control on every route
@@ -110,4 +122,5 @@ npm run dev
 - Invoice numbers cannot be modified (GST compliance)
 
 ### Contact
+
 For queries, contact the project lead before making assumptions.

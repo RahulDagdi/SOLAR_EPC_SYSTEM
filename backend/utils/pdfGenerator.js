@@ -11,7 +11,7 @@ const generateGSTInvoice = async (invoiceData, outputPath) => {
 
       // Header
       doc.fontSize(20).text('TAX INVOICE', { align: 'center' });
-      doc.fontSize(12).text('ATPL Solar EPC Pvt Ltd', { align: 'center' });
+      doc.fontSize(12).text(' Solar EPC Pvt Ltd', { align: 'center' });
       doc.text('GSTIN: ' + (invoiceData.ourGSTIN || 'N/A'), { align: 'center' });
       doc.moveDown();
 
