@@ -1,0 +1,75 @@
+import React, { useState, useEffect } from 'react';
+import DataTable from '../../components/DataTable';
+import Modal from '../../components/Modal';
+import toast from 'react-hot-toast';
+
+const Training = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [pagination, setPagination] = useState({ page: 1, limit: 10, total: 0, totalPages: 1 });
+  const [searchTerm, setSearchTerm] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
+  const [editingId, setEditingId] = useState(null);
+  const [formData, setFormData] = useState({});
+
+  const columns = [{ header: 'Program', accessor: 'programName' }, { header: 'Type', accessor: 'type', type: 'badge' }, { header: 'Trainer', accessor: 'trainer' }, { header: 'Start', accessor: 'startDate', type: 'date' }, { header: 'End', accessor: 'endDate', type: 'date' }, { header: 'Duration', accessor: 'duration' }];
+
+  useEffect(() => { fetchData(); }, [pagination.page, searchTerm]);
+
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      setData([]);
+      setPagination({ page: 1, limit: 10, total: 0, totalPages: 1 });
+    } catch (error) { toast.error('Failed to load data'); }
+    finally { setLoading(false); }
+  };
+
+  const handleChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value }); };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    toast.success(editingId ? 'Updated successfully' : 'Created successfully');
+    setModalOpen(false); setEditingId(null); fetchData();
+  };
+
+  const handleEdit = (item) => { setEditingId(item._id); setFormData({ ...item }); setModalOpen(true); };
+  const handleDelete = async (id) => { toast.success('Deleted successfully'); fetchData(); };
+  const handleBulkDelete = async (ids) => { toast.success(ids.length + ' records deleted'); fetchData(); };
+  const openAddModal = () => { setEditingId(null); setFormData({}); setModalOpen(true); };
+
+  return (
+    <div className="space-y-4">
+      <DataTable
+        title="Training & Development"
+        columns={columns}
+        data={data}
+        loading={loading}
+        pagination={pagination}
+        onPageChange={(page) => setPagination({ ...pagination, page })}
+        onSearch={(term) => { setSearchTerm(term); setPagination({ ...pagination, page: 1 }); }}
+        onAdd={openAddModal}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+        onBulkDelete={handleBulkDelete}
+        onRefresh={fetchData}
+        searchPlaceholder="Search..."
+        addButtonLabel="Add New"
+        showActions={true}
+        showBulkDelete={true}
+      />
+      <Modal isOpen={modalOpen} onClose={() => { setModalOpen(false); setEditingId(null); }}
+        title={editingId ? 'Edit Training & Development' : 'Add Training & Development'} size="lg">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <p className="text-gray-500 text-center py-8">Form fields for Training & Development - Add your fields here</p>
+          <div className="flex items-center justify-end gap-3">
+            <button type="button" onClick={() => { setModalOpen(false); setEditingId(null); }} className="btn-secondary">Cancel</button>
+            <button type="submit" className="btn-primary">{editingId ? 'Update' : 'Create'}</button>
+          </div>
+        </form>
+      </Modal>
+    </div>
+  );
+};
+
+export default Training;
